@@ -27,11 +27,14 @@
         </div>
         <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
             <div class="text-md lg:flex-grow">
-                <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-blue-dark hover:text-blue-darkest mr-4">
+                <a href="/" class="block mt-4 lg:inline-block lg:mt-0 text-blue-dark hover:text-blue-darkest mr-4">
                     Latest Tools
                 </a>
-                <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-blue-dark hover:text-blue-darkest mr-4">
+                <a href="/" class="block mt-4 lg:inline-block lg:mt-0 text-blue-dark hover:text-blue-darkest mr-4">
                     Privacy Policy
+                </a>
+                <a href="mailto:suggest@toolvault.xyz" class="block mt-4 lg:inline-block lg:mt-0 text-blue-dark hover:text-blue-darkest mr-4">
+                    Suggest Tool
                 </a>
             </div>
         </div>
