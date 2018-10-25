@@ -19,6 +19,8 @@ https://toolvault.xyz - all the useful tools any sane human would need
 
 
 # Adding a tool
+* Add Cloudflare DNS entry (so we get HTTPs as it doesn't support wildcard SSL for free and I don't want to setup LetsEncrypt)
+* Add domain to nginx vhost config
 * Create `resources/views/tools/{subdomain}.blade.php` info page extending `layouts/app`
 * Create `resources/routes/tools/{subdomain}.php` with the routes/code
 
