@@ -49,6 +49,14 @@
             >
             </tool-box>
 
+            <tool-box
+                name="URL Encode and Decode"
+                description="Easily encode/decode with PHP's urlencode/urldecode"
+                url="{{ url('/url') }}"
+                v-bind:filter-by="filterBy"
+            >
+            </tool-box>
+
             {{--
             <tool-box
                 name="PHP Information"

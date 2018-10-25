@@ -11,6 +11,7 @@ https://toolvault.xyz - all the useful tools any sane human would need
 * * `valet link echo.toolvault`
 * * `valet link httpstatus.toolvault`
 * * `valet link base64.toolvault`
+* * `valet link url.toolvault`
 
 # Dev URLs
 * http://toolvault.test
