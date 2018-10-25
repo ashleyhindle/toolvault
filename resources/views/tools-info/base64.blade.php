@@ -1,8 +1,8 @@
 @extends('layouts.tools-info')
-@section('title', 'URL Decode/Encode')
+@section('title', 'Base64 Decode/Encode')
 
 @section('info')
-    https://url.{{ env('APP_DOMAIN') }}/encode/O' Leary!
+    https://base64.{{ env('APP_DOMAIN') }}/encode/test
 
-    https://url.{{ env('APP_DOMAIN') }}/decode/dG9vbHZhdWx0
+    https://base64.{{ env('APP_DOMAIN') }}/decode/dG9vbHZhdWx0
 @endsection
