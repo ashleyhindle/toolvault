@@ -1,12 +1,12 @@
 <template>
     <div class="w-64 border rounded border-yellow-dark hover:border-yellow-darker p-4 mr-4 mt-4" v-show="showTool">
-        <div class="h-24">
-            <strong>{{ name }}</strong>
+        <div class="h-32">
+            <strong class="mb-3 block">{{ name }}</strong>
             <p>
                 {{ description }}
             </p>
         </div>
-        <a class="align-bottom" :href="url">Use Tool</a>
+        <a class="align-bottom" :href="url">More info..</a>
     </div>
 </template>
 

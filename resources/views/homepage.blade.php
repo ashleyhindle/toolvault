@@ -18,21 +18,38 @@
         <!-- Tool grid -->
         <div class="flex flex-wrap">
             <tool-box
-                name="Image Conversion"
-                description="Convert all your images, etc.."
-                url="https://imageconversion.{{ env('APP_DOMAIN') }}/"
+                name="IP Address"
+                description="Get your IP information programmatically & simply - ipv4, ipv6, plain text, JSON or JSONP"
+                url="{{ url('/ip') }}"
                 v-bind:filter-by="filterBy"
             >
             </tool-box>
 
             <tool-box
-                name="IP Address"
-                description="Get your IP information - ipv4, ipv6, geo location, plain text or JSON"
-                url="https://ip.{{ env('APP_DOMAIN') }}/"
+                name="HTTP Status Codes"
+                description="Returns the passed HTTP status codes for testing with any HTTP verb"
+                url="{{ url('/httpstatus') }}"
                 v-bind:filter-by="filterBy"
             >
             </tool-box>
 
+            <tool-box
+                name="Echo Request Data"
+                description="Echos all passed query string, POST, file and header values for easy testing with any HTTP verb"
+                url="{{ url('/echo') }}"
+                v-bind:filter-by="filterBy"
+            >
+            </tool-box>
+
+            <tool-box
+                name="Base64 Encode and Decode"
+                description="Easily encode/decode base64"
+                url="{{ url('/base64') }}"
+                v-bind:filter-by="filterBy"
+            >
+            </tool-box>
+
+            {{--
             <tool-box
                 name="PHP Information"
                 description="PHP LTS information, JSON API or nice fancy HTML view, no plain text etc.."
@@ -40,8 +57,15 @@
                 v-bind:filter-by="filterBy"
             >
             </tool-box>
+
+            <tool-box
+                name="Image Conversion"
+                description="Convert all your images, etc.."
+                url="https://imageconversion.{{ env('APP_DOMAIN') }}/"
+                v-bind:filter-by="filterBy"
+            >
+            </tool-box>
+            --}}
         </div>
     </div>
-
-    <p>This is my body content.</p>
 @endsection

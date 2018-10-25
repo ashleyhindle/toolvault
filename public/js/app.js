@@ -11757,8 +11757,8 @@ var render = function() {
         "w-64 border rounded border-yellow-dark hover:border-yellow-darker p-4 mr-4 mt-4"
     },
     [
-      _c("div", { staticClass: "h-24" }, [
-        _c("strong", [_vm._v(_vm._s(_vm.name))]),
+      _c("div", { staticClass: "h-32" }, [
+        _c("strong", { staticClass: "mb-3 block" }, [_vm._v(_vm._s(_vm.name))]),
         _vm._v(" "),
         _c("p", [
           _vm._v("\n            " + _vm._s(_vm.description) + "\n        ")
@@ -11766,7 +11766,7 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("a", { staticClass: "align-bottom", attrs: { href: _vm.url } }, [
-        _vm._v("Use Tool")
+        _vm._v("More info..")
       ])
     ]
   )
