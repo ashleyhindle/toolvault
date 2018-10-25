@@ -3,7 +3,7 @@
 
 @section('info')
     <h1>DISCLAIMER struggles with some characters when used via GET, use form for POST and safer encoding/decoding</h1>
-    
+
     https://url.{{ env('APP_DOMAIN') }}/encode/O' Leary!
     <hr />
     https://url.{{ env('APP_DOMAIN') }}/decode/dG9vbHZhdWx0
