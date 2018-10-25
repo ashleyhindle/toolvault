@@ -20,7 +20,7 @@
             <tool-box
                 name="Image Conversion"
                 description="Convert all your images, etc.."
-                url="https://imageconversion.toolvault.xyz/"
+                url="https://imageconversion.{{ env('APP_DOMAIN') }}/"
                 v-bind:filter-by="filterBy"
             >
             </tool-box>
@@ -28,7 +28,7 @@
             <tool-box
                 name="IP Address"
                 description="Get your IP information - ipv4, ipv6, geo location, plain text or JSON"
-                url="https://ip.toolvault.xyz/"
+                url="https://ip.{{ env('APP_DOMAIN') }}/"
                 v-bind:filter-by="filterBy"
             >
             </tool-box>
@@ -36,7 +36,7 @@
             <tool-box
                 name="PHP Information"
                 description="PHP LTS information, JSON API or nice fancy HTML view, no plain text etc.."
-                url="https://php.toolvault.xyz/"
+                url="https://php.{{ env('APP_DOMAIN') }}/"
                 v-bind:filter-by="filterBy"
             >
             </tool-box>

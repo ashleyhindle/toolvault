@@ -35,11 +35,20 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function map()
     {
-        $this->mapApiRoutes();
+        $urlParts = explode('.', $_SERVER['HTTP_HOST']);
+        $subdomain = preg_replace('/[^a-z0-9]/i', '', array_shift($urlParts));
+        $subdomainRoutesExist = file_exists(realpath(__DIR__ . '/../../routes/tools/' . $subdomain . '.php'));
 
-        $this->mapWebRoutes();
-
-        //
+        // Load routes for the subdomain/tool if they exist
+        // Otherwise show the standard 'filter by tool name' site
+        if ($subdomain != 'toolvault' && $subdomainRoutesExist) {
+            Route::domain($_SERVER['HTTP_HOST'])
+                ->middleware('web')
+                ->namespace($this->namespace)
+                ->group(base_path('routes/tools/' . $subdomain . '.php'));
+        } else {
+            $this->mapWebRoutes();
+        }
     }
 
     /**
@@ -54,20 +63,5 @@ class RouteServiceProvider extends ServiceProvider
         Route::middleware('web')
              ->namespace($this->namespace)
              ->group(base_path('routes/web.php'));
-    }
-
-    /**
-     * Define the "api" routes for the application.
-     *
-     * These routes are typically stateless.
-     *
-     * @return void
-     */
-    protected function mapApiRoutes()
-    {
-        Route::prefix('api')
-             ->middleware('api')
-             ->namespace($this->namespace)
-             ->group(base_path('routes/api.php'));
     }
 }
