@@ -35,6 +35,11 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function map()
     {
+        if (substr(php_sapi_name(), 0, 3) == 'cli') {
+            $this->mapWebRoutes();
+            return;
+        }
+
         $urlParts = explode('.', $_SERVER['HTTP_HOST']);
         $subdomain = preg_replace('/[^a-z0-9]/i', '', array_shift($urlParts));
         $subdomainRoutesExist = file_exists(realpath(__DIR__ . '/../../routes/tools/' . $subdomain . '.php'));
