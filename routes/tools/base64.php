@@ -11,4 +11,4 @@ Route::get('/decode/{data}', function($data) {
 
 Route::get('/encode/{data}', function($data) {
     return response(base64_encode($data));
-});
+})->where('data', '(.*)');
