@@ -106,12 +106,14 @@ window.Vue = __webpack_require__(3);
 
 Vue.component('ToolBox', __webpack_require__(16));
 
-var filterTools = new Vue({
-    el: '#filterTools',
-    data: {
-        filterBy: ''
-    }
-});
+if (document.getElementById('filterTools')) {
+    var filterTools = new Vue({
+        el: '#filterTools',
+        data: {
+            filterBy: ''
+        }
+    });
+}
 
 /***/ }),
 /* 3 */
