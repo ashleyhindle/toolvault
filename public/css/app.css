@@ -6351,6 +6351,16 @@ a:hover {
   text-decoration: underline;
 }
 
+.dosis {
+  font-family: "Dosis";
+}
+
+@font-face {
+  font-family: "Dosis";
+  src: url("/fonts/Dosis-Regular.ttf"), url("/fonts/Dosis-Regular.eot");
+  /* IE */
+}
+
 @media (min-width: 576px) {
   .sm\:list-reset {
     list-style: none;
