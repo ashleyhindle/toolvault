@@ -6352,13 +6352,7 @@ a:hover {
 }
 
 .dosis {
-  font-family: "Dosis";
-}
-
-@font-face {
-  font-family: "Dosis";
-  src: url("/fonts/Dosis-Regular.ttf"), url("/fonts/Dosis-Regular.eot");
-  /* IE */
+  font-family: 'Dosis', sans-serif;
 }
 
 @media (min-width: 576px) {
